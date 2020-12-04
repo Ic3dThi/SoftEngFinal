@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <style>
+        .header {
+            background-color:#666;
+            padding: 40px;
+            text-align: center;
+            font-size: 50px;
+            color: black;
+        }
+
+        .footer {
+            background-color: #666;
+            padding: 2px;
+            text-align: center;
+            font-size: 15px;
+            color: black;
+            position: absolute;
+            bottom: 0%;
+            width:99%;
+        }
+
+        .hidden {
+        display: none;
+        padding: 40px;
+        position: absolute;
+        right: 35%;
+        top: 15%;
+        transform: translate(50%, -65px);
+    }
+        select{
+            transform: translate(400%, 400%);
+        }
+    </style>
+    <script>
+        function showLinks(selectObject) {
+            var val = selectObject.value;
+            switch (val) {
+                case "1":
+                    document.getElementById('1').style.display = "block";
+                    document.getElementById('2').style.display = "none";
+                    document.getElementById('3').style.display = "none";
+                    document.getElementById('4').style.display = "none";
+                    document.getElementById('5').style.display = "none";
+                    break;
+                case "2":
+                    document.getElementById('2').style.display = "block";
+                    document.getElementById('1').style.display = "none";
+                    document.getElementById('3').style.display = "none";
+                    document.getElementById('4').style.display = "none";
+                    document.getElementById('5').style.display = "none";
+                    break;
+                case "3":
+                    document.getElementById('3').style.display = "block";
+                    document.getElementById('1').style.display = "none";
+                    document.getElementById('2').style.display = "none";
+                    document.getElementById('4').style.display = "none";
+                    document.getElementById('5').style.display = "none";
+                    break;
+                case "4":
+                    document.getElementById('4').style.display = "block";
+                    document.getElementById('1').style.display = "none";
+                    document.getElementById('3').style.display = "none";
+                    document.getElementById('2').style.display = "none";
+                    document.getElementById('5').style.display = "none";
+                    break;
+                case "5":
+                    document.getElementById('5').style.display = "block";
+                    document.getElementById('1').style.display = "none";
+                    document.getElementById('3').style.display = "none";
+                    document.getElementById('4').style.display = "none";
+                    document.getElementById('2').style.display = "none";
+                    break;
+                case "0":
+                    document.getElementById('5').style.display = "none";
+                    document.getElementById('1').style.display = "none";
+                    document.getElementById('3').style.display = "none";
+                    document.getElementById('4').style.display = "none";
+                    document.getElementById('2').style.display = "none";
+                    break;
+    
+            }
+    
+        }
+    </script>
+    <title>Admin Portal</title>
+  </head>
+  <body>
+    <header>
+        <h1 class="header">Admin Portal</h1>
+    </header>
+    <footer>
+        <p class="footer">Created By Richard Oseguera, Thi Tran, and Harsimranjit Singh</p>
+    </footer>
+    <select id="admin" onChange="javascript:showLinks(this)" style="top: 20%; left: 20%;">
+        <option value="0"></option>
+        <option value="1">Admin</option>
+        <option value="2">Finance Admin</option>
+        <option value="3">Sales Admin</option>
+        <option value="4">HR Admin</option>
+        <option value="5">Tech Admin</option>
+    </select>
+    <div class="hidden" id="1" style="margin-top: 150px;">
+        <ul>
+            <li>Manage User Accounts</li>
+            <li>Assign Roles</li>
+            <li>Help Desk</li>
+        </ul>
+    </div>
+    <div class="hidden" id="2" style="margin-top: 150px;">
+        <ul>
+            <li>Finance Reports</li>
+            <li>Accounts Payable</li>
+            <li>Accounts Receivable</li>
+            <li>Tax</li>
+        </ul>
+    </div>
+    <div class="hidden" id="3" style="margin-top: 150px;">
+        <ul>
+            <li>Sales Reports</li>
+            <li>Sales Lead</li>
+            <li>Sales Demo</li>
+        </ul>
+    </div>
+    <div class="hidden" id="4" style="margin-top: 150px;">
+        <ul>
+            <li>New Hire On-boarding</li>
+            <li>Benefits</li>
+            <li>Payroll</li>
+            <li>Off-boarding</li>
+            <li>HR Reports</li>
+        </ul>
+    </div>
+    <div class="hidden" id="5" style="margin-top: 150px;"> 
+        <ul>
+            <li>Application Monitoring</li>
+            <li>Tech Support</li>
+            <li>App Development</li>
+            <li>App Admin</li>
+            <li>Release Management</li>
+        </ul>
+    </div>
+    </div>
+  </body>
+</html>
